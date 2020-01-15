@@ -1,6 +1,6 @@
 # SGCNN
 
-This repository contains an implementation of the 'SGCNN' (Slab-Graph Convolutional Neural Network) that predicts surface-related properties of crystal structures.
+This repository contains an implementation of the 'SGCNN' (Slab Graph Convolutional Neural Network) that predicts surface-related properties of crystal structures.
 
 # Using Examples
 
