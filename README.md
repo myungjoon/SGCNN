@@ -1,12 +1,19 @@
 # SGCNN
-
 This repository contains an implementation of the 'SGCNN' (Slab Graph Convolutional Neural Network) that predicts surface-related properties of crystal structures.
 
-# Installation
+It provides 1) training a SGCNN model 2) an easy use to prediction of an adsorption energy using pre-trained model.
 
-# Using Examples
+# Installation
+This project required TensorFlow > 1.7.0
+
+# Training
+Training consists of two steps. First you need to prepare your dataset. After that, instill the dataset into SGCNN structure implemented by TensorFlow
+
+- Our model read [POSCAR](https://docs.rs/crate/vasp-poscar/0.2.0) files. If you have CIF files, you can run 'cif_to_POSCAR.py' file.
+
 
 # Pretrained Model
+To use pretrained model for predictions of adsorption energy, you can simply use [SGCNN_pretrained.py](https://github.com/myungjoon/SGCNN/SGCNN_pretrained.py)
 
 # Citation
 If you use 'SGCNN', please cite us using
