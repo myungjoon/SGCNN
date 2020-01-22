@@ -3,24 +3,80 @@ This repository contains an implementation of the 'SGCNN' (Slab Graph Convolutio
 
 It provides 1) training a SGCNN model 2) an easy use to prediction of an adsorption energy using pre-trained model.
 
+<div align="center">
+<img src="https://github.com/myungjoon/SGCNN/blob/master/achitecture.png"><br>
+</div>
+
+
+
 # Installation
+
 This project required TensorFlow > 1.7.0
 
-# Training
+Clone this repository:
+
+```
+git clone https://github.com/myungjoon/SGCNN.git
+```
+
+# Usage
 Training consists of two steps. First you need to prepare your dataset. After that, instill the dataset into SGCNN structure implemented by TensorFlow.
 
 'SGCNN' takes input as bulk and surface crystal graphs. Currently, this software automatically converts POSCAR file to the graphs via running 'cgsurface.py' and 'cgbulk.py'.
 
 To apply your dataset, you need to prepare two POSCAR files with same name in different directories, /surface and /bulk.
 
-- Our model read [POSCAR](https://docs.rs/crate/vasp-poscar/0.2.0) files. If you have CIF files, you can run 'cif_to_POSCAR.py' file.
+- Our model read [POSCAR](https://docs.rs/crate/vasp-poscar/0.2.0) files. If you have CIF files, you should convert it to POSCAR file.
+
+
+
+## Features
+
+You can add your own features to [feature.csv](https://github.com/myungjoon/SGCNN/blob/master/feature.csv) file.
+
+
+
+## Data Format
 
 You need to write 'data.txt' file for the dataset. Our 'sgcnn.py' file will read 'data.txt' file, and input graphs and output values (binding energy) are extracted.
 
+'data.txt' file has following format.
+
+```
+#adsorbate  crystal  face  site  atom1  atom2  adsorption energy
+1 1 111 11 Au Ti -0.87
+4 1 111 21 Au Ti -3.931
+```
+
+- Each row describes a structure, composition, and surface-related property (adsorption energy)
+
+- Each column represents specific characteristic.
+
+- Corresponding POSCAR files should be stored in /bulk and /surface directories.
+
+
+
+## Models
+
+The trained model will be saved as 'models/best.ckpt'
+
+You can use your own model by running 'test.py'
+
+
+
 # Pretrained Model
-To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/SGCNN_pretrained.py)
+To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/SGCNN_pretrained.py). This python file reads test.txt and writes results on test_result.txt
+
+
+
+# License
+
+This repository is released under the [MIT license](https://github.com/myungjoon/SGCNN/blob/master/LICENSE).
+
+
 
 # Citation
+
 If you use 'SGCNN', please cite us using
 
 ```
