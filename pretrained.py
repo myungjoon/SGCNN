@@ -25,7 +25,7 @@ rmse_best = 100
 saver_path = 'model_best/'
 model_name = 'best.ckpt'
 
-test_file = 'Test3.txt'
+test_file = 'test.txt'
 
 ##test file
 with open(test_file, 'r') as file:
