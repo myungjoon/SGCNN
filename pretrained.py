@@ -22,10 +22,10 @@ mae_avg = 0
 mae_best = 100
 rmse_best = 100
 
-saver_path = 'model_best/'
+saver_path = 'pretrained/'
 model_name = 'best.ckpt'
-
 test_file = 'test.txt'
+result_file = 'result.txt'
 
 ##test file
 with open(test_file, 'r') as file:
@@ -282,10 +282,16 @@ with tf.Session() as sess:
                       y: test_y, keep_prob: 1.0,}
 
     pred_ads_value = sess.run(y_pred, feed_dict=feed_dict_test)
+    
+    
     mae = sess.run(acc_mae, feed_dict=feed_dict_test)
     rmse = np.sqrt(sess.run(acc_mse, feed_dict=feed_dict_test))
 
     print("MAE : %.5f RMSE : %.5f" % (mae, rmse))
+
+with open(result_file, 'w') as f:
+    for i in range(len(test_materials)):
+        f.write(test_materials[i] + ' ' + str(pred_ads_value[i][0]))
 
 
 plt.figure(1)
