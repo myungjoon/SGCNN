@@ -68,7 +68,7 @@ You can use your own model by running [test.py](https://github.com/myungjoon/SGC
 
 # Pretrained Model
 
-To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/blob/master/pretrained.py). This python file reads 'test.txt' and writes results on 'test_result.txt'
+To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/blob/master/pretrained.py). This python file reads 'test.txt' and writes results on 'result.txt'
 
 
 
