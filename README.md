@@ -62,13 +62,13 @@ You need to write data.txt file for the dataset. Our [sgcnn.py](https://github.c
 
 The trained model will be saved as 'models/best.ckpt'
 
-You can use your own model by running [test.py](https://github.com/myungjoon/SGCNN/blob/master/test.py)
+You can use your own model by running [test.py](https://github.com/myungjoon/SGCNN/blob/master/test.py). This python file reads 'test.txt' and writes results on 'result.txt'.
 
 
 
 # Pretrained Model
 
-To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/blob/master/pretrained.py). This python file reads 'test.txt' and writes results on 'result.txt'
+To use pretrained model for predictions of adsorption energy, you can simply use [pretrained.py](https://github.com/myungjoon/SGCNN/blob/master/pretrained.py). This python file reads 'test.txt' and writes results on 'result.txt'.
 
 
 
