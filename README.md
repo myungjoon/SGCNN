@@ -72,11 +72,6 @@ To use pretrained model for predictions of adsorption energy, you can simply use
 
 
 
-# License
-
-This repository is released under the [MIT license](https://github.com/myungjoon/SGCNN/blob/master/LICENSE).
-
-
 
 # Citation
 
